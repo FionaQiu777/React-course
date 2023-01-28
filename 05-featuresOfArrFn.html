@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>箭头函数的特点</title>
+    <script>
+      /* 
+        1. 箭头函数中没有 arguments
+        2. 箭头函数中没有自己的this
+            - 它的this总是外层作用域的this
+        3. 箭头函数的this无法通过call()、apply()、bind()修改
+        4. 箭头函数无法作为构造函数使用
+      */
+
+      function fn(...args) {
+        // arguments用来保存函数的实参
+        console.log(arguments);
+        console.log(args);
+      }
+    </script>
+  </head>
+  <body></body>
+</html>
