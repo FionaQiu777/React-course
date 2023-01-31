@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>渲染列表</title>
+    <script src="script/react.development.js"></script>
+    <script src="script/react-dom.development.js"></script>
+    <!-- 引入babel -->
+    <script src="script/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!-- 设置js代码被babel处理 -->
+    <script type="text/babel">
+      const name = "Peach";
+      const lang = "en";
+
+      /*
+        {}只能用来放JS表达式，而不能放语句(if for)
+          在语句中是可以去操作JSX的
+      */
+      let div;
+      if (lang === "en") {
+        div = <div>Hello,{name}</div>;
+      } else if (lang === "cn") {
+        div = <div>你好,{name}</div>;
+      }
+
+      const arr = ["Peach", "QIU", "Yee"];
+
+      // 将 arr 渲染为一个列表在网页中显示
+      // JSX 中会自动将数组中的元素在页面中显示
+      const list = (
+        <ul>
+          {arr.map((ele) => (
+            <li>{ele}</li>
+          ))}
+        </ul>
+      );
+
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      root.render(list);
+    </script>
+  </body>
+</html>
