@@ -1,10 +1,10 @@
-import React from "react";
-import "./App.css";
-
-class App extends React.Component {
-  render() {
-    return <div className="app">Hello React</div>;
-  }
-}
+import Logs from "./Components/Logs/Logs";
+const App = () => {
+  return (
+    <div>
+      <Logs />
+    </div>
+  );
+};
 
 export default App;
