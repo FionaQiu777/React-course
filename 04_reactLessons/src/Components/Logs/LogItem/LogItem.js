@@ -1,5 +1,6 @@
 import MyDate from "./MyDate/MyDate.js";
 import "./LogItem.css";
+import Card from "../../UI/Card/Card.js";
 
 const LogItem = (props) => {
   // 在函数组件中，属性就相当于是函数的参数，可以通过参数来访问
@@ -8,7 +9,7 @@ const LogItem = (props) => {
   // props是只读的，不能修改
   // console.log(props.date);
   return (
-    <div>
+    <Card>
       <div className="item">
         {/* 日期容器 */}
         <MyDate date={props.date} />
@@ -23,7 +24,7 @@ const LogItem = (props) => {
           <div className="time">{props.time}分钟</div>
         </div>
       </div>
-    </div>
+    </Card>
   );
 };
 

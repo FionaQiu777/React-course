@@ -1,5 +1,6 @@
 import LogItem from "./LogItem/LogItem.js";
 import "./Logs.css";
+import Card from "../UI/Card/Card.js";
 
 // 模拟一组从服务器中加载的数据
 const logsData = [
@@ -47,7 +48,7 @@ const logItemDate = logsData.map((item, index) => (
 /* 日志的容器 */
 const Logs = () => {
   return (
-    <div className="logs">
+    <Card className="logs">
       {/* 在父组件中,可以直接在子组件中设置属性 */}
       {/*
         <LogItem
@@ -58,7 +59,7 @@ const Logs = () => {
       <LogItem date={new Date()} desc={"Learning JS"} time={"40"} />
        */}
       {logItemDate}
-    </div>
+    </Card>
   );
 };
 
